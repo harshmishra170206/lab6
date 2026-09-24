@@ -8,12 +8,12 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'pip install -r requirements.txt'
+                bat 'pip install -r requirements.txt'
             }
         }
         stage('Run Unit Tests') {
             steps {
-                sh 'pytest test_app.py'
+                bat 'pytest test_app.py'
             }
         }
     }
