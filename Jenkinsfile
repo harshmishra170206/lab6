@@ -3,7 +3,7 @@ pipeline {
   stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/harshmishra170206/lab6.git'
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/harshmishra170206/lab6.git']])
             }
         }
         stage('Install Dependencies') {
